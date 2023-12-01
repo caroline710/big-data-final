@@ -15,7 +15,7 @@ state_abbreviations = {
     'Virginia': 'VA', 'Washington DC': 'DC', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY'
 }
 
-df = pd.read_csv('data/2018-climate-all.csv')
+df = pd.read_csv('data/2020-climate-all.csv')
 
 # remove duplicates
 df.drop_duplicates(subset=['Username', 'Content'], inplace=True)
@@ -40,4 +40,4 @@ df['User Location (State)'] = df['User Location'].apply(get_state)
 # filter rows where 'User Location (State)' is not blank
 filtered_df = df[df['User Location (State)'].notna() & (df['User Location (State)'] != '')]
 
-filtered_df.to_csv('data/2018-climate-usa.csv', index=False)
+filtered_df.to_csv('data/2020-climate-usa.csv', index=False)
