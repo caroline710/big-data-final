@@ -11,12 +11,18 @@
 ## Final Report and Specifications
 ###
 
-**Intro/Motivation:** 
+**Intro/Motivation:** (Caroline)
 
-**Data:** TWScrape uses the Twitter API to scrape search results; we used it to acquire Tweets with the keywords 'Greta Thunberg' and 'climate change' across 2018, 2019, and 2020. 
+**Data:** (Vibha) TWScrape uses the Twitter API to scrape search results; we used it to acquire Tweets with the keywords 'Greta Thunberg' and 'climate change' across 2018, 2019, and 2020. 
 
 **Method:**
+*VADER* (Vibha)
 
-**Results:**
+*Climate analysis model* (Caroline)
 
-**Conclusion:**
+*Data vizualization* (Maryam)
+
+**Results:** (All)
+
+**Conclusion:** (Maryam) 
+
