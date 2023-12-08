@@ -1,4 +1,4 @@
-# big-data-final
+#  Sentiment Analysis of Climate Change: EU vs. US 
 
 ## Task Outline
 ### 
