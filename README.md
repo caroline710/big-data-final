@@ -12,14 +12,13 @@
 ###
 
 **Intro/Motivation:**
-Greta Thunberg’s activism has played a leading role in the global discourse of climate change. Since her first solitary school strike in August 2018, Thunberg has managed to galvanize millions and influence people who had not previously been interested in her agenda. This “Greta Thunberg Effect” has contributed to a surge in climate change conversations on social media and drawn in a diverse array of voices, especially on Twitter.
+In recent years, the conversation about climate change has heated up, with discussions about our planet’s future intensifying. The increasingly visible impact of extreme weather events and activism from figures like Greta Thunberg have played a leading role in mobilizing global communities.
 
-Motivated by this significant shift, we wanted to examine climate change related tweets during the height of Thunberg’s influence (2018-2020) and interpret the impact of her activism on public sentiment. What shifts in sentiment can be observed in climate change discourse during this period and how do these shifts correlate with key moments in Thunberg’s activism?
+Motivated by this apparent shift in public discourse, we wanted to examine climate change related tweets during the height of Thunberg’s influence between 2018-2020. What changes in sentiment can be observed in climate change discourse during this period and how does this vary among and between the EU and U.S?
 
-In this project, we scraped approximately 100,000 tweets from both the United States and European Union and analyzed sentiment separately to understand the nuances of public opinion in two different geopolitical regions.
+In this project, we scraped approximately 110,000 tweets from both the EU and US and analyzed sentiment separately to understand the nuances of public opinion in these two different geopolitical regions. 
 
-
-**Scraping our Data:** 
+**Getting the Tweets** 
 
 For our data we used TWScrape to scrape search results; we used it to acquire Tweets with the keyword 'climate change' across 2018, 2019, and 2020. Twscrape is a python library created in May 2023, and it utilizes Twitter's API to interact with their platform and retrieve the desired data. We had to create a Twitter account to get valid API credentials. We managed to achieve the following-
 
@@ -28,7 +27,14 @@ For our data we used TWScrape to scrape search results; we used it to acquire Tw
 3. We noticed that the data was extremely strated 
    
 *Data Wrangling:*
-We had to do a considerable amount of data wrangling for our project, especially with regards to the user location, which we would later use for geoplotting. Since we could not access the geolocation of the tweets from TWitter API without payment, it was importance to standardize the self-reported user location and remove spam locations like "Purgatory". We also had to organize the tweets by states for the US and by country for the EU for the visualizations of nation-based sentiment.
+We had to do a considerable amount of data wrangling for our project, especially with regards to the user location, which we would later use for geoplotting. Since we could not access the geolocation of the tweets from Twitter API without payment, it was importance to standardize the self-reported user location and remove spam locations like "Purgatory". We also had to organize the tweets by states for the US and by country for the EU for the visualizations of nation-based sentiment.
+
+After gathering the tweet data, we performed an initial exploratory analysis to examine the distribution of tweets across U.S. states and EU countries.
+
+![Number of Tweets per US State](graphs/us-num-tweets.png)
+![Number of Tweets per US State](graphs/eu-num-tweets.png)
+
+These barplots highlight the regional differences of Twitter usage between the U.S. and EU. This is likely attributed to the much higher Twitter user base in the U.S, leading to more contribution to discussions on topics like climate change.
 
 **Method:**
 *VADER* (Vibha)
