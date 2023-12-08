@@ -43,12 +43,17 @@ After our initial exploratory analysis, our data was ready to be run through a s
 
 We used `pandas`, `matplotlib`, and `seaborn` to create the graphs of the climate data. We loaded the data to a `pandas` data frame from a GitHub link to the .csv files. Our main considerations were the frequency distribution of sentiment as well as sentiment score over the course of the three years in our designated time period. We plotted histograms of the frequency of the sentiment score, using the data from the entire time period. For both countries, the data was negatively skewed, indicating overwhelming positive sentiment across the board. This was a bit unexpected, as we thought that such a divise topic might create a lot of negative sentiment. 
 
+![hist-eu](https://github.com/caroline710/big-data-final/assets/136007158/567f987a-4cc3-431c-b868-b266ff851d34)
+![hist-usa](https://github.com/caroline710/big-data-final/assets/136007158/09eb6195-0eaa-4662-bc5b-b01d60e3f5cc)
+
+
 We also developed lineplots mapping the sentiment score across the months, and separated the graphs by year; both countries were included on each graph for comparative purposes. Once created, we looked for general trends, as well as the sentiment surrounding significant events related to climate policy and discourse. In general, sentiment scores decreased throughout the three year time period. Additionally, the EU countries had more positive sentiment than the USA. The most notable event in 2018 was the United Nations Climate Change Conference (COP24) in December. Around that time, sentiment was high, but fell in the following month, perhaps due to discourse surrounding the event. For the first half of 2019, there were various student protests going on around Europe, which could be the cause of the general downwards trend in the EU data. Lastly, the COVID-19 pandemic starting in March 2020 produced an upwards trend in sentiment for a few months. Reflecting back on the time period, many people were discussing nature healing due to the lack of human pollution, as people worldwide were in quarantine. Both countries started to see a downward decline when the world started to reopen during the summer. 
 
-**Results:** (All)
+![2018-graph](https://github.com/caroline710/big-data-final/assets/136007158/f4682133-5366-4940-b5b4-1f04e78bc1b4)
+![2019-graph](https://github.com/caroline710/big-data-final/assets/136007158/59bb38d5-f1f5-4dd4-9d93-fdc76cc318b4)
+![2020-graph](https://github.com/caroline710/big-data-final/assets/136007158/48e0f3aa-a8c6-4fa1-84c4-681c4dc1e38a)
 
-
-**Conclusion:**
+**Challenges and Future Directions:**
 
 Following our difficulties scraping, we faced difficulty with the type of data produced. Some Tweets were in foreign languages and could not be run through the model, so we opted to eliminate them. We also faced the aforementioned location data issues with user input. During the visualization step, the date data was formatted in a manner that was not readable by `seaborn`, so we had to turn the format into `datetime` objects.
 
