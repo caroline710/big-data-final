@@ -48,5 +48,11 @@ We also developed lineplots mapping the sentiment score across the months, and s
 **Results:** (All)
 
 
-**Conclusion:** (Maryam) 
+**Conclusion:**
+
+Following our difficulties scraping, we faced difficulty with the type of data produced. Some Tweets were in foreign languages and could not be run through the model, so we opted to eliminate them. We also faced the aforementioned location data issues with user input. During the visualization step, the date data was formatted in a manner that was not readable by `seaborn`, so we had to turn the format into `datetime` objects.
+
+If we had more time, we would try to expand our EU tweets dataset, and rerun the distilBERT model on those tweets. We would also try to expand the model to run sentiment analysis on tweets about Greta Thurberg and her impact on climate change. The difficulty to determine whether discourse about Greta is political or related to the environment would have to be differentiated in a future model. 
+
+Additional future directions could be looking at other continents, using other political or activist figureheads as a timeline, and further integrating geopolitical data for multi-variable analysis. 
 
