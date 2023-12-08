@@ -73,6 +73,10 @@ We then plotted the geographic distribution of average sentiment to show the var
 
 While the average sentiment was positive across the board, we see a large amount of variation within between regions. The sentiment of the West Coast and Northeast, for example, was markedly more positive than the South. Comparatively, sentiment in the EU was much more affirmative, reflecting their higher concern about climate change and proactive stance in addressing it. The EU has historically been at the forefront of the Paris Agreement and pursuing ambitious climate intiiatives like the European Green Deal which underscores this sentiment. Meanwhile in the U.S., sentiment appears more divided along political lines, reflected in policy fluctations regarding climate change at the federal level.
 
+**Variation of Sentiments**
+
+We also wanted to visualize how the sentiments varied in different states in the US and countries in EU. So we plotted a simple bar plot for average sentiment across each state  from highest to lowest variance. We noticed that the top 3 states with the highest variance in sentiments were Mississippi, Idaho and Texas (all 3 are big red states). In comparison, the Croatia, Estonia and Lithuania were top three countries with most variation in sentiments in the EU.  
+
 **Data visualization**
 
 We used `pandas`, `matplotlib`, and `seaborn` to create the graphs of the climate data. We loaded the data to a `pandas` data frame from a GitHub link to the .csv files. Our main considerations were the frequency distribution of sentiment as well as sentiment score over the course of the three years in our designated time period. We plotted histograms of the frequency of the sentiment score, using the data from the entire time period. For both countries, the data was negatively skewed, indicating overwhelming positive sentiment across the board. This was a bit unexpected, as we thought that such a divise topic might create a lot of negative sentiment. 
