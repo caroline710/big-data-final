@@ -9,9 +9,8 @@
 5. Conclusion: What worked, what didn’t? What would you do if you had to improve the project?
 
 ## Final Report and Specifications
-###
 
-**Intro/Motivation:**
+### A Sentiment Analysis of Climate Change Tweets: EU vs US
 In recent years, the conversation about climate change has heated up, with discussions about our planet’s future intensifying. The increasingly visible impact of extreme weather events and activism from figures like Greta Thunberg have played a leading role in mobilizing global communities.
 
 Motivated by this apparent shift in public discourse, we wanted to examine climate change related tweets during the height of Thunberg’s influence between 2018-2020. What changes in sentiment can be observed in climate change discourse during this period and how does this vary among and between the EU and U.S?
@@ -36,10 +35,9 @@ After gathering the tweet data, we performed an initial exploratory analysis to 
 
 These barplots highlight the regional differences of Twitter usage between the U.S. and EU. This is likely attributed to the much higher Twitter user base in the U.S, leading to more contribution to discussions on topics like climate change.
 
-**Method:**
-*VADER* (Vibha)
+**Time for Sentiment Analysis**
 
-*Climate analysis model* (Caroline)
+After our initial exploratory analysis, our data was ready to be run through a sentiment analysis model. We used [this](https://huggingface.co/XerOpred/twitter-climate-sentiment-model) Hugging Face model, a fine-tuned version of DistilBERT that has been tailored to evaluate sentiment within tweets related to climate change. DistilBERT is a streamlined version of the BERT model, designed to capture contextual understanding in a compact form which made it ideal for analyzing our large dataset of tweets.
 
 *Data vizualization* (Maryam)
 
