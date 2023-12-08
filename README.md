@@ -26,6 +26,7 @@ For our data we used TWScrape to scrape search results; we used it to acquire Tw
 3. We noticed that the data was extremely strated 
    
 **Data Wrangling**
+
 We had to do a considerable amount of data wrangling for our project, especially with regards to the user location, which we would later use for geoplotting. Since we could not access the geolocation of the tweets from Twitter API without payment, it was importance to standardize the self-reported user location and remove spam locations like "Purgatory". We also had to organize the tweets by states for the US and by country for the EU for the visualizations of nation-based sentiment.
 
 After gathering the tweet data, we performed an initial exploratory analysis to examine the distribution of tweets across U.S. states and EU countries.
