@@ -25,7 +25,7 @@ For our data we used TWScrape to scrape search results; we used it to acquire Tw
 2. Our search query was "climate change". We debated using other key words like "Greta Thunberg" since it would result in tweets related to her political image and would affect the focus of our sentiment analysis away from climate change. We also realize that this limited our tweets from other languages and countries in the EU where English is not very widespread.
 3. We noticed that the data was extremely strated 
    
-*Data Wrangling:*
+**Data Wrangling**
 We had to do a considerable amount of data wrangling for our project, especially with regards to the user location, which we would later use for geoplotting. Since we could not access the geolocation of the tweets from Twitter API without payment, it was importance to standardize the self-reported user location and remove spam locations like "Purgatory". We also had to organize the tweets by states for the US and by country for the EU for the visualizations of nation-based sentiment.
 
 After gathering the tweet data, we performed an initial exploratory analysis to examine the distribution of tweets across U.S. states and EU countries.
@@ -39,7 +39,7 @@ These barplots highlight the regional differences of Twitter usage between the U
 
 After our initial exploratory analysis, our data was ready to be run through a sentiment analysis model. We used [this](https://huggingface.co/XerOpred/twitter-climate-sentiment-model) Hugging Face model, a fine-tuned version of DistilBERT that has been tailored to evaluate sentiment within tweets related to climate change. DistilBERT is a streamlined version of the BERT model, designed to capture contextual understanding in a compact form which made it ideal for analyzing our large dataset of tweets.
 
-*Data vizualization* (Maryam)
+**Data visualization**
 
 We used `pandas`, `matplotlib`, and `seaborn` to create the graphs of the climate data. We loaded the data to a `pandas` data frame from a GitHub link to the .csv files. Our main considerations were the frequency distribution of sentiment as well as sentiment score over the course of the three years in our designated time period. We plotted histograms of the frequency of the sentiment score, using the data from the entire time period. For both countries, the data was negatively skewed, indicating overwhelming positive sentiment across the board. This was a bit unexpected, as we thought that such a divise topic might create a lot of negative sentiment. 
 
@@ -53,7 +53,7 @@ We also developed lineplots mapping the sentiment score across the months, and s
 ![2019-graph](https://github.com/caroline710/big-data-final/assets/136007158/59bb38d5-f1f5-4dd4-9d93-fdc76cc318b4)
 ![2020-graph](https://github.com/caroline710/big-data-final/assets/136007158/48e0f3aa-a8c6-4fa1-84c4-681c4dc1e38a)
 
-**Challenges and Future Directions:**
+**Challenges and Future Directions**
 
 Following our difficulties scraping, we faced difficulty with the type of data produced. Some Tweets were in foreign languages and could not be run through the model, so we opted to eliminate them. We also faced the aforementioned location data issues with user input. During the visualization step, the date data was formatted in a manner that was not readable by `seaborn`, so we had to turn the format into `datetime` objects.
 
