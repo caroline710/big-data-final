@@ -23,7 +23,6 @@ For our data we used TWScrape to scrape search results; we used it to acquire Tw
 
 1. We managed to scrape 500-800 tweets for 10 randomly selected days/months between 2018-2020.
 2. Our search query was "climate change". We debated using other key words like "Greta Thunberg" since it would result in tweets related to her political image and would affect the focus of our sentiment analysis away from climate change. We also realize that this limited our tweets from other languages and countries in the EU where English is not very widespread.
-3. We noticed that the data was extremely strated 
    
 **Data Wrangling**
 
