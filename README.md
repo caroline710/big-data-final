@@ -75,7 +75,10 @@ While the average sentiment was positive across the board, we see a large amount
 
 **Variation of Sentiments**
 
-We also wanted to visualize how the sentiments varied in different states in the US and countries in EU. So we plotted a simple bar plot for average sentiment across each state  from highest to lowest variance. We noticed that the top 3 states with the highest variance in sentiments were Mississippi, Idaho and Texas (all 3 are big red states). In comparison, the Croatia, Estonia and Lithuania were top three countries with most variation in sentiments in the EU.  
+We also wanted to visualize how the sentiments varied in different states in the US and countries in EU. So we plotted a simple bar plot for average sentiment across each state  from highest to lowest variance. We noticed that the top 3 states with the highest variance in sentiments were Mississippi, Idaho and Texas (all 3 are big red states). In comparison, the Croatia, Estonia and Lithuania were top three countries with most variation in sentiments in the EU.
+
+![US Variation of Sentiment](graphs/us-variation.png)
+![EU Variation of Sentiment](graphs/eu-variation.png)
 
 **Data visualization**
 
