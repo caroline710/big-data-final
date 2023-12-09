@@ -39,7 +39,7 @@ These barplots highlight the regional differences of Twitter usage between the U
 
 After our initial exploratory analysis, our data was ready to be run through a sentiment analysis model. We used [this](https://huggingface.co/XerOpred/twitter-climate-sentiment-model) Hugging Face model, a fine-tuned version of DistilBERT that has been tailored to evaluate sentiment within tweets related to climate change. DistilBERT is a streamlined version of the BERT model, designed to capture contextual understanding in a compact form which made it ideal for analyzing our large dataset of tweets.
 
-**Wordclouds Analysis***
+**Wordclouds Analysis**
 
 We generated 4 word clouds for positive and negative sentiments in US and EU to compare the top ten most common words in both regions.  We also chose to align the colorscheme for US and EU according to thier national colors/ thier flags for better understandability.
 
