@@ -1,4 +1,4 @@
-# big-data-final
+#  Sentiment Analysis of Climate Change: EU vs. US 
 
 ## Task Outline
 ### 
@@ -26,6 +26,7 @@ For our data we used TWScrape to scrape search results; we used it to acquire Tw
 3. We noticed that the data was extremely strated 
    
 **Data Wrangling**
+
 We had to do a considerable amount of data wrangling for our project, especially with regards to the user location, which we would later use for geoplotting. Since we could not access the geolocation of the tweets from Twitter API without payment, it was importance to standardize the self-reported user location and remove spam locations like "Purgatory". We also had to organize the tweets by states for the US and by country for the EU for the visualizations of nation-based sentiment.
 
 After gathering the tweet data, we performed an initial exploratory analysis to examine the distribution of tweets across U.S. states and EU countries.
@@ -39,6 +40,46 @@ These barplots highlight the regional differences of Twitter usage between the U
 
 After our initial exploratory analysis, our data was ready to be run through a sentiment analysis model. We used [this](https://huggingface.co/XerOpred/twitter-climate-sentiment-model) Hugging Face model, a fine-tuned version of DistilBERT that has been tailored to evaluate sentiment within tweets related to climate change. DistilBERT is a streamlined version of the BERT model, designed to capture contextual understanding in a compact form which made it ideal for analyzing our large dataset of tweets.
 
+**Wordclouds Analysis***
+
+We generated 4 word clouds for positive and negative sentiments in US and EU to compare the top ten most common words in both regions.  We also chose to align the colorscheme for US and EU according to thier national colors/ thier flags for better understandability.
+
+*U.S. Positive Wordcloud*
+
+![US Positive Wordcloud](graphs/us-positive-wordcloud.png)
+
+*U.S. Negative Wordcloud*
+
+![US Negative Wordcloud](graphs/us-negative-wordcloud.png)
+
+For positive sentiments, the most common words in the US wordclouds  were "People", "Believe", "Make", "Fight", "real", "Need", "trump", "Science", "Time", "Now". In comparison, The top positive sentiment words from EU were "Climateaction", "Environment", "Energy", "Arctic", "Global", "Action", "World", "Time", "One" and "People". Just looking at the top words alone, we noticed that tweets on US were more hopeful and emotional regarding climate change, whereas EU seemed to have an more 'action-oriented' mindset related to practicality and future steps for the climate crisis. We also noticed that the negative sentiments for the US were generally more passionate, with words like "hoax", "Global Warming", "money", "man-made", "believe", "Science", "year", "Now", "liberal" and "time left".
+
+*EU Positive Wordcloud*
+
+![EU Positive Wordcloud](graphs/eu-positive-wordcloud.png)
+
+*EU Negative Wordcloud*
+
+![EU Negative Wordcloud](graphs/eu-negative-wordcloud.png)
+
+EU was generally not that strong in negative sentiments and the words seemed pretty similar to the positive sentiment wordcloud- with additional words like "human", "lie" and "political" amongst others which could indicate that negative sentiments rose when politics and climate change were involved, although this was not a direct correlation. We also know from the geoplots that EU had generally a more unified distribution of sentiment, which could reflection the solidaity of the UN in climate policy and how unilateral climate targets shared by the EU might help in creating a more uniform sentiment distribution. Whereas just in the US, the sentiment variation was so much higher across the states, and the more "red" states were generally leaning towards negative sentiments, indicating just how integrated US politics are on a topic like climate change.
+
+**A Geographic Perspective**
+
+We then plotted the geographic distribution of average sentiment to show the variation in sentiment intensity across the states and EU. A higher average sentiment (lighter color) indicates a more positive sentiment.
+
+![US Chloropleth](graphs/us-geoplot.png)
+![EU Chloropleth](graphs/eu-geoplot.png)
+
+While the average sentiment was positive across the board, we see a large amount of variation within between regions. The sentiment of the West Coast and Northeast, for example, was markedly more positive than the South. Comparatively, sentiment in the EU was much more affirmative, reflecting their higher concern about climate change and proactive stance in addressing it. The EU has historically been at the forefront of the Paris Agreement and pursuing ambitious climate intiiatives like the European Green Deal which underscores this sentiment. Meanwhile in the U.S., sentiment appears more divided along political lines, reflected in policy fluctations regarding climate change at the federal level.
+
+**Variation of Sentiments**
+
+We also wanted to visualize how the sentiments varied in different states in the US and countries in EU. So we plotted a simple bar plot for average sentiment across each state  from highest to lowest variance. We noticed that the top 3 states with the highest variance in sentiments were Mississippi, Idaho and Texas (all 3 are big red states). In comparison, the Croatia, Estonia and Lithuania were top three countries with most variation in sentiments in the EU.
+
+![US Variation of Sentiment](graphs/us-variation.png)
+![EU Variation of Sentiment](graphs/eu-variation.png)
+
 **Data visualization**
 
 We used `pandas`, `matplotlib`, and `seaborn` to create the graphs of the climate data. We loaded the data to a `pandas` data frame from a GitHub link to the .csv files. Our main considerations were the frequency distribution of sentiment as well as sentiment score over the course of the three years in our designated time period. We plotted histograms of the frequency of the sentiment score, using the data from the entire time period. For both countries, the data was negatively skewed, indicating overwhelming positive sentiment across the board. This was a bit unexpected, as we thought that such a divise topic might create a lot of negative sentiment. 
@@ -47,11 +88,16 @@ We used `pandas`, `matplotlib`, and `seaborn` to create the graphs of the climat
 ![hist-usa](https://github.com/caroline710/big-data-final/assets/136007158/09eb6195-0eaa-4662-bc5b-b01d60e3f5cc)
 
 
-We also developed lineplots mapping the sentiment score across the months, and separated the graphs by year; both countries were included on each graph for comparative purposes. Once created, we looked for general trends, as well as the sentiment surrounding significant events related to climate policy and discourse. In general, sentiment scores decreased throughout the three year time period. Additionally, the EU countries had more positive sentiment than the USA. The most notable event in 2018 was the United Nations Climate Change Conference (COP24) in December. Around that time, sentiment was high, but fell in the following month, perhaps due to discourse surrounding the event. For the first half of 2019, there were various student protests going on around Europe, which could be the cause of the general downwards trend in the EU data. Lastly, the COVID-19 pandemic starting in March 2020 produced an upwards trend in sentiment for a few months. Reflecting back on the time period, many people were discussing nature healing due to the lack of human pollution, as people worldwide were in quarantine. Both countries started to see a downward decline when the world started to reopen during the summer. 
+We also developed lineplots mapping the sentiment score across the months, and separated the graphs by year; both countries were included on each graph for comparative purposes. Once created, we looked for general trends, as well as the sentiment surrounding significant events related to climate policy and discourse. In general, sentiment scores decreased throughout the three year time period. Additionally, the EU countries had more positive sentiment than the USA.
 
 ![2018-graph](https://github.com/caroline710/big-data-final/assets/136007158/f4682133-5366-4940-b5b4-1f04e78bc1b4)
+The most notable event in 2018 was the United Nations Climate Change Conference (COP24) in December. Around that time, sentiment was high, but fell in the following month, perhaps due to discourse surrounding the event.
+
 ![2019-graph](https://github.com/caroline710/big-data-final/assets/136007158/59bb38d5-f1f5-4dd4-9d93-fdc76cc318b4)
+For the first half of 2019, there were various student protests going on around Europe, which could be the cause of the general downwards trend in the EU data.
+
 ![2020-graph](https://github.com/caroline710/big-data-final/assets/136007158/48e0f3aa-a8c6-4fa1-84c4-681c4dc1e38a)
+Lastly, the COVID-19 pandemic starting in March 2020 produced an upwards trend in sentiment for a few months. Reflecting back on the time period, many people were discussing nature healing due to the lack of human pollution, as people worldwide were in quarantine. Both countries started to see a downward decline when the world started to reopen during the summer.
 
 **Challenges and Future Directions**
 
